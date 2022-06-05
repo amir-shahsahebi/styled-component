@@ -13,3 +13,9 @@ export const StyledButton = styled.button`
   cursor: pointer;
   transition: 0.5s all ease-out;
 `;
+// for extends a styled component we use:
+export const FancyButton = styled(StyledButton)`
+  background-image: linear-gradient(45deg, blue, red);
+  border: none;
+  /* color: red; */
+`;
