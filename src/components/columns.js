@@ -1,3 +1,6 @@
+// npm i
+import { format } from "date-fns";
+
 export const COLUMNS = [
   {
     Header: "Id",
@@ -18,6 +21,11 @@ export const COLUMNS = [
     Header: "Date of Birth",
     Footer: "Date of Birth",
     accessor: "date_of_birth",
+    Cell: ({ value }) => {
+      // Cell just show to ui and used to formatting cells
+      //because we have date in string, we must convert it to date format to set the date to "dd/MM/yyyy" format via format (npm i date-fns)
+      return format(new Date(value), "dd/MM/yyyy");
+    },
   },
   {
     Header: "Country",

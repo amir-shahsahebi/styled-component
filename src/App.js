@@ -9,6 +9,7 @@ import "./App.css";
 // } from "./components/Button/Button";
 // import { ThemeProvider, createGlobalStyle } from "styled-components";
 import BasicTable from "./components/BasicTable";
+import FilteringTable from "./components/FilteringTable";
 import SortingTable from "./components/SortingTable";
 
 // const theme = {
@@ -63,7 +64,8 @@ function App() {
   return (
     <div className="App">
       {/* <BasicTable /> */}
-      <SortingTable />
+      {/* <SortingTable /> */}
+      <FilteringTable />
     </div>
   );
 }
