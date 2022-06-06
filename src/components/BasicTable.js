@@ -8,14 +8,26 @@ const BasicTable = () => {
   const data = useMemo(() => MOCK_DATA, []);
 
   // step3: creating a table instance
-  const tableInstance = useTable({
-    // using es6 shorthand syntax
+  //   const tableInstance = useTable({
+  //     // using es6 shorthand syntax
+  //     columns,
+  //     data,
+  //   });
+  //   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+  //     tableInstance;
+  //   console.log("tableInstance", tableInstance);
+
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    footerGroups,
+    rows,
+    prepareRow,
+  } = useTable({
     columns,
     data,
   });
-
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    tableInstance;
 
   // step4: define a basic table structure
   return (
@@ -41,6 +53,15 @@ const BasicTable = () => {
           );
         })}
       </tbody>
+      <tfoot>
+        {footerGroups.map((footerGroup) => (
+          <tr {...footerGroup.getFooterGroupProps()}>
+            {footerGroup.headers.map((column) => (
+              <td {...column.getFooterProps()}>{column.render("Footer")}</td>
+            ))}
+          </tr>
+        ))}
+      </tfoot>
     </table>
   );
 };
