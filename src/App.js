@@ -9,6 +9,7 @@ import "./App.css";
 // } from "./components/Button/Button";
 // import { ThemeProvider, createGlobalStyle } from "styled-components";
 import BasicTable from "./components/BasicTable";
+import SortingTable from "./components/SortingTable";
 
 // const theme = {
 //   dark: {
@@ -61,7 +62,8 @@ import BasicTable from "./components/BasicTable";
 function App() {
   return (
     <div className="App">
-      <BasicTable />
+      {/* <BasicTable /> */}
+      <SortingTable />
     </div>
   );
 }
