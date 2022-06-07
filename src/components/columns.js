@@ -1,21 +1,25 @@
 // npm i
 import { format } from "date-fns";
+import { ColumnFilter } from "./ColumnFilter";
 
 export const COLUMNS = [
   {
     Header: "Id",
     Footer: "Id",
     accessor: "id",
+    Filter: ColumnFilter,
   },
   {
     Header: "First Name",
     Footer: "First Name",
     accessor: "first_name",
+    Filter: ColumnFilter,
   },
   {
     Header: "LAst Name",
     Footer: "LAst Name",
     accessor: "last_name",
+    Filter: ColumnFilter,
   },
   {
     Header: "Date of Birth",
@@ -26,16 +30,19 @@ export const COLUMNS = [
       //because we have date in string, we must convert it to date format to set the date to "dd/MM/yyyy" format via format (npm i date-fns)
       return format(new Date(value), "dd/MM/yyyy");
     },
+    Filter: ColumnFilter,
   },
   {
     Header: "Country",
     Footer: "Country",
     accessor: "country",
+    Filter: ColumnFilter,
   },
   {
     Header: "Phone",
     Footer: "Phone",
     accessor: "phone",
+    Filter: ColumnFilter,
   },
 ];
 
