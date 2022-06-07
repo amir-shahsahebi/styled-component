@@ -9,6 +9,7 @@ import "./App.css";
 // } from "./components/Button/Button";
 // import { ThemeProvider, createGlobalStyle } from "styled-components";
 import BasicTable from "./components/BasicTable";
+import ColumnOrder from "./components/ColumnsOrder";
 import FilteringTable from "./components/FilteringTable";
 import PaginationTable from "./components/PaginationTable";
 import RowSelection from "./components/RowSelection";
@@ -70,7 +71,8 @@ function App() {
       {/* <FilteringTable /> */}
       {/* <PaginationTable /> */}
       {/* <RowSelection /> */}
-      <RowSelection />
+      {/* <RowSelection /> */}
+      <ColumnOrder />
     </div>
   );
 }
