@@ -9,6 +9,7 @@ import "./App.css";
 // } from "./components/Button/Button";
 // import { ThemeProvider, createGlobalStyle } from "styled-components";
 import BasicTable from "./components/BasicTable";
+import ColumnHiding from "./components/ColumnHiding";
 import ColumnOrder from "./components/ColumnsOrder";
 import FilteringTable from "./components/FilteringTable";
 import PaginationTable from "./components/PaginationTable";
@@ -72,7 +73,8 @@ function App() {
       {/* <PaginationTable /> */}
       {/* <RowSelection /> */}
       {/* <RowSelection /> */}
-      <ColumnOrder />
+      {/* <ColumnOrder /> */}
+      <ColumnHiding />
     </div>
   );
 }
