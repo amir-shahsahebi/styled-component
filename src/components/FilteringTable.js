@@ -4,11 +4,17 @@ import { COLUMNS } from "./columns";
 import { useMemo } from "react";
 import "./table.css";
 import GlobalFilter from "./GlobalFilter";
+import { ColumnFilter } from "./ColumnFilter";
 const FilteringTable = () => {
   //   const columns = useMemo(() => GROUPED_COLUMNS, []);
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
 
+  const defaultColumn = useMemo(() => {
+    return {
+      Filter: ColumnFilter,
+    };
+  }, []);
   // step3: creating a table instance
   //   const tableInstance = useTable({
   //     // using es6 shorthand syntax
@@ -33,6 +39,7 @@ const FilteringTable = () => {
     {
       columns,
       data,
+      defaultColumn,
     },
     useFilters,
     useGlobalFilter
