@@ -11,6 +11,7 @@ import "./App.css";
 import BasicTable from "./components/BasicTable";
 import FilteringTable from "./components/FilteringTable";
 import PaginationTable from "./components/PaginationTable";
+import RowSelection from "./components/RowSelection";
 import SortingTable from "./components/SortingTable";
 
 // const theme = {
@@ -67,7 +68,9 @@ function App() {
       {/* <BasicTable /> */}
       {/* <SortingTable /> */}
       {/* <FilteringTable /> */}
-      <PaginationTable />
+      {/* <PaginationTable /> */}
+      {/* <RowSelection /> */}
+      <RowSelection />
     </div>
   );
 }
