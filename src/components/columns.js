@@ -7,8 +7,8 @@ export const COLUMNS = [
     Header: "Id",
     Footer: "Id",
     accessor: "id",
-    // Filter: ColumnFilter,
-    disableFilters: true,
+    // Filter: ColumnFilter, // we use default filter instead of write a filter key for any item
+    disableFilters: true, // by using this parameter, you remove filtering from it column
   },
   {
     Header: "First Name",
