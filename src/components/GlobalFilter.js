@@ -3,7 +3,7 @@ import { useAsyncDebounce } from "react-table";
 
 const GlobalFilter = ({ filter, setFilter }) => {
   const [value, setValue] = useState(filter);
-
+  // using debounced method for adding a delay to input filter
   const onChange = useAsyncDebounce((value) => {
     setFilter(value || undefined);
   }, 700);
