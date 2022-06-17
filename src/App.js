@@ -10,6 +10,7 @@ import "./App.css";
 // import { ThemeProvider, createGlobalStyle } from "styled-components";
 import BasicTable from "./components/BasicTable";
 import ColumnHiding from "./components/ColumnHiding";
+import ColumnHidingTest from "./components/ColumnHidingTest";
 import ColumnOrder from "./components/ColumnsOrder";
 import FilteringTable from "./components/FilteringTable";
 import PaginationTable from "./components/PaginationTable";
@@ -73,10 +74,11 @@ function App() {
       {/* <FilteringTable /> */}
       {/* <PaginationTable /> */}
       {/* <RowSelection /> */}
+      <ColumnHidingTest />
       {/* <RowSelection /> */}
       {/* <ColumnOrder /> */}
       {/* <ColumnHiding /> */}
-      <StickyTable />
+      {/* <StickyTable />  */}
     </div>
   );
 }
